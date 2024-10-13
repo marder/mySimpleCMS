@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="col-md-8 mb-5">
+    <h1 class="display-3 my-5">Dodaj wpis</h1>
+    <div class="col-6">
+      <p>
+        Data publikacji:
+        <i><%= post.createdAt.toLocaleString('pl-PL', { timeZone: 'UTC' }) %></i>
+      </p>
+    </div>
+    <form
+      class="row g-3"
+      action="/"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      <div class="col-md-6">
+        <label for="title" class="form-label">Tytuł</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          value="<%= post.title %>"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="author" class="form-label">Autor</label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          name="author"
+          value="<%= post.author %>"
+          required
+        />
+      </div>
+      <div class="col-12">
+        <label for="content" class="form-label">Treść</label>
+        <textarea
+          class="form-control"
+          id="content"
+          rows="12"
+          name="content"
+          required
+        >
+<%= post.content %></textarea
+        >
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Dodaj obraz</label>
+        <input class="form-control" type="file" name="image" id="image" />
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+        <a href="/" class="btn btn-danger">Anuluj</a>
+      </div>
+    </form>
+  </div>
+</div>
