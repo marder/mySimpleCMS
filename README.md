@@ -22,3 +22,6 @@ npm run dev
 ```
 node server.js
 ```
+## Version History
+* 0.0.1
+    * Test version
