@@ -1,7 +1,7 @@
 # mySimpleCMS ver. 0.0.1
 mySimpleCMS is a simple headless content management system written in ExpressJS
 
-### Executing program
+## Executing program
 * download the repo
 * install all dependencies using command:
 ```

@@ -17,46 +17,25 @@
             </h2>
             <div>
               <% if (message) { %>
-              <div
-                class="my-4 alert alert-dismissible fade show alert-<%= type %>"
-                role="alert"
-              >
-                <button
-                  class="btn-close"
-                  type="button"
-                  data-bs-dismiss="alert"
-                  aria-label="Close"
-                ></button
-                ><%= message %>
-              </div>
-              <% } %>
+                <div class="my-4 alert alert-dismissible fade show alert-<%= type %>" role="alert">
+                  <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <%= message %>
+                </div>
+                <% } %>
             </div>
             <form action="/login" method="POST">
               <div class="row gy-2 overflow-hidden">
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="login"
-                      id="login"
-                      placeholder="Nazwa konta"
-                      required
-                    />
+                    <input type="text" class="form-control" name="login" id="login" placeholder="Nazwa konta"
+                      required />
                     <label for="login" class="form-label">Login</label>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="password"
-                      id="password"
-                      value=""
-                      placeholder="Hasło"
-                      required
-                    />
+                    <input type="password" class="form-control" name="password" id="password" value=""
+                      placeholder="Hasło" required />
                     <label for="password" class="form-label">Hasło</label>
                   </div>
                 </div>

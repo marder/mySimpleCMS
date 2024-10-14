@@ -4,83 +4,37 @@
     <form class="row g-3" action="/frontpage/edit?_method=PUT" method="POST">
       <div class="col-md-12">
         <label for="heroHeader" class="form-label">Nagłówek sekcji hero</label>
-        <input
-          type="text"
-          class="form-control"
-          id="heroHeader"
-          name="heroHeader"
-          value="<%= heroHeader %>"
-        />
+        <input type="text" class="form-control" id="heroHeader" name="heroHeader" value="<%= heroHeader %>" />
       </div>
       <div class="col-12">
         <label for="heroContent" class="form-label">Treść sekcji hero</label>
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          name="heroContent"
-        ><%= heroContent %></textarea
-        >
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+          name="heroContent"><%= heroContent %></textarea>
       </div>
       <div class="col-md-12">
         <label for="aboutHeader" class="form-label">Nagłówek sekcji "O nas"</label>
-        <input
-          type="text"
-          class="form-control"
-          id="aboutHeader"
-          name="aboutHeader"
-          value="<%= aboutHeader %>"
-        />
+        <input type="text" class="form-control" id="aboutHeader" name="aboutHeader" value="<%= aboutHeader %>" />
       </div>
       <div class="col-12">
         <label for="aboutContent" class="form-label">Treść sekcji "O nas"</label>
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          name="aboutContent"
-        ><%= aboutContent %></textarea
-        >
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+          name="aboutContent"><%= aboutContent %></textarea>
       </div>
       <div class="col-md-12">
         <label for="stripe" class="form-label">Napis na pasku</label>
-        <input
-          type="text"
-          class="form-control"
-          id="stripe"
-          name="stripe"
-          value="<%= stripe %>"
-        />
+        <input type="text" class="form-control" id="stripe" name="stripe" value="<%= stripe %>" />
       </div>
       <div class="col-md-12">
         <label for="contactAdress" class="form-label">Adres</label>
-        <input
-          type="text"
-          class="form-control"
-          id="contactAdress"
-          name="contactAdress"
-          value="<%= contactAdress %>"
-        />
+        <input type="text" class="form-control" id="contactAdress" name="contactAdress" value="<%= contactAdress %>" />
       </div>
       <div class="col-md-12">
         <label for="contactPhone" class="form-label">Telefon</label>
-        <input
-          type="text"
-          class="form-control"
-          id="contactPhone"
-          name="contactPhone"
-          value="<%= contactPhone %>"
-        />
+        <input type="text" class="form-control" id="contactPhone" name="contactPhone" value="<%= contactPhone %>" />
       </div>
       <div class="col-md-12">
         <label for="contactEmail" class="form-label">Email</label>
-        <input
-          type="text"
-          class="form-control"
-          id="contactEmail"
-          name="contactEmail"
-          value="<%= contactEmail %>"
-        />
+        <input type="text" class="form-control" id="contactEmail" name="contactEmail" value="<%= contactEmail %>" />
       </div>
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Zapisz</button>

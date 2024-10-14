@@ -2,89 +2,51 @@
   <div class="col-md-8 mb-5">
     <h1 class="display-4 my-5">Edytuj wpis</h1>
     <% if (locals.message) { %>
-    <div
-      class="my-4 alert alert-dismissible fade show alert-<%= locals.message.type %>"
-      role="alert"
-    >
-      <button
-        class="btn-close"
-        type="button"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button
-      ><%= locals.message.message %>
-    </div>
-    <% } %>
-    <div class="row g-3 pb-4">
-      <div class="col-6">
-        Data publikacji:
-        <i
-          ><%= post.createdAt.toLocaleString('pl-PL', { timeZone: 'UTC' }) %></i
-        >
+      <div class="my-4 alert alert-dismissible fade show alert-<%= locals.message.type %>" role="alert">
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+        <%= locals.message.message %>
       </div>
-      <div class="col-6">
-        Data aktualizacji:
-        <i
-          ><%= post.updatedAt.toLocaleString('pl-PL', { timeZone: 'UTC' }) %></i
-        >
-      </div>
-    </div>
-    <form
-      class="row g-3"
-      action="/<%= post._id %>?_method=PUT"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      <div class="col-md-6">
-        <label for="title" class="form-label">Tytuł</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          name="title"
-          value="<%= post.title %>"
-          required
-        />
-      </div>
-      <div class="col-md-6">
-        <label for="author" class="form-label">Autor</label>
-        <input
-          type="text"
-          class="form-control"
-          id="author"
-          name="author"
-          value="<%= post.author %>"
-          required
-        />
-      </div>
-      <div class="col-12">
-        <label for="content" class="form-label">Treść</label>
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="12"
-          name="content"
-          required
-        >
-<%= post.content %></textarea
-        >
-      </div>
-      <div class="col-12">
-        <label for="image" class="form-label">Zamień obraz</label>
-        <input class="form-control" type="file" name="image" id="image" />
-        <div class="py-4">
-          <img
-            src="/uploads/<%= post.image %>"
-            class="img-fluid rounded float-start"
-            alt=""
-          />
+      <% } %>
+        <div class="row g-3 pb-4">
+          <div class="col-6">
+            Data publikacji:
+            <i>
+              <%= post.createdAt.toLocaleString('pl-PL', { timeZone: 'UTC' }) %>
+            </i>
+          </div>
+          <div class="col-6">
+            Data aktualizacji:
+            <i>
+              <%= post.updatedAt.toLocaleString('pl-PL', { timeZone: 'UTC' }) %>
+            </i>
+          </div>
         </div>
-        <input type="hidden" name="old_image" value="<%= post.image %>" />
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Zapisz</button>
-        <a href="/" class="btn btn-danger">Anuluj</a>
-      </div>
-    </form>
+        <form class="row g-3" action="/<%= post._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <div class="col-md-6">
+            <label for="title" class="form-label">Tytuł</label>
+            <input type="text" class="form-control" id="title" name="title" value="<%= post.title %>" required />
+          </div>
+          <div class="col-md-6">
+            <label for="author" class="form-label">Autor</label>
+            <input type="text" class="form-control" id="author" name="author" value="<%= post.author %>" required />
+          </div>
+          <div class="col-12">
+            <label for="content" class="form-label">Treść</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="12" name="content" required>
+<%= post.content %></textarea>
+          </div>
+          <div class="col-12">
+            <label for="image" class="form-label">Zamień obraz</label>
+            <input class="form-control" type="file" name="image" id="image" />
+            <div class="py-4">
+              <img src="/uploads/<%= post.image %>" class="img-fluid rounded float-start" alt="" />
+            </div>
+            <input type="hidden" name="old_image" value="<%= post.image %>" />
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+            <a href="/" class="btn btn-danger">Anuluj</a>
+          </div>
+        </form>
   </div>
 </div>

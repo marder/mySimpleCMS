@@ -1,13 +1,5 @@
-<form
-  method="POST"
-  style="display: inline-block"
-  action="<%= url %>?_method=DELETE"
->
-  <button
-    class="btn btn-danger btn-sm"
-    type="submit"
-    onclick="return confirm('Czy na pewno chcesz usunąć ten wpis?');"
-  ><i class="fas fa-trash fa-lg mx-1"></i
-    >
+<form method="POST" style="display: inline-block" action="<%= url %>?_method=DELETE">
+  <button class="btn btn-danger btn-sm" type="submit"
+    onclick="return confirm('Czy na pewno chcesz usunąć ten wpis?');"><i class="fas fa-trash fa-lg mx-1"></i>
   </button>
 </form>
