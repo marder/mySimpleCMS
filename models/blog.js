@@ -8,7 +8,7 @@ const blogPostSchema = new mongoose.Schema({
   author: {
     type: String,
     required: true,
-    default: "Marcin Derucki",
+    default: "xDe",
   },
   content: {
     type: String,
